@@ -1,0 +1,15 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+
+  @include adaptiveValue("font-size", 72, 36);
+}
+
+.page {
+
+  /* .page__page */
+  &__page {}
+}

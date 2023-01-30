@@ -1,0 +1,663 @@
+.main {
+  position: relative;
+
+  /* .main__container */
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("padding-top", 113, 160, 768, 360, 1);
+
+    @media (max-width:$mobile) {
+      padding-bottom: rem(300);
+    }
+
+    @media (min-width:$mobile) {
+      min-height: 100vh;
+      justify-content: space-between;
+    }
+  }
+
+  /* .main__content */
+  &__content {
+    text-align: center;
+    position: relative;
+
+    @media (min-width:$mobile) {
+      max-width: rem(600);
+      text-align: left;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: rem(140);
+    right: rem(-93);
+    z-index: -1;
+
+    @media (min-width: em(768)) and (max-width: em(1040)) {
+      opacity: .8;
+    }
+
+    @media (max-width:$mobile) {
+      @include adaptiveValue("width", 1047, 600);
+      @include adaptiveValue("top", 440, 590, 768, 360, 1);
+      @include adaptiveValue("right", 0, -215, 768, 360, 1);
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: rem(-33);
+    @include adaptiveValue("left", -10, -250);
+
+    z-index: -1;
+  }
+
+  &__slogan {
+    @media (max-width:$mobile) {
+      @include adaptiveValue("margin-bottom", 70, 55, 768, 360, 1);
+    }
+  }
+
+  /* .main__subtitle */
+  &__subtitle {
+    font-size: rem(30);
+    line-height: .7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 23, 14, 768, 360, 1);
+    }
+
+    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
+
+    @media (max-width:$mobileSmall) {
+      line-height: 1;
+    }
+  }
+
+  /* .main__title */
+  &__title {
+    line-height: 1;
+    font-weight: 500;
+
+    @include adaptiveValue("font-size", 80, 40, 768, 360, 1);
+
+    &:not(:last-child) {
+      margin-bottom: rem(28);
+    }
+
+    @media (max-width: em(360)) {
+      &:not(:last-child) {
+        margin-bottom: rem(18);
+      }
+    }
+
+    span {
+      line-height: 1;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: linear-gradient(95.98deg, #A169F7 1.6%, #00AAFF 24.24%, #FF6163 50.71%, #97CF26 68.48%);
+
+      @media (max-width:$mobile) {
+        display: block;
+      }
+
+      @media (max-width:em(360)) {
+        margin-top: rem(16);
+      }
+    }
+  }
+
+  /* .main__text */
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(58);
+    }
+
+    @include adaptiveValue("font-size", 30, 16, 768, 360, 1);
+
+    @media (max-width: em(360)) {
+      &:not(:last-child) {
+        margin-bottom: rem(53);
+      }
+    }
+  }
+
+  &__button {
+    line-height: math.div(31, 24);
+
+    box-shadow: 0px 18px 28px 1px rgba(89, 86, 233, 0.5);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0px 18px 28px 1px rgba(97, 95, 234, 0.2);
+      }
+    }
+  }
+
+  /* .main__circles */
+  &__circles {}
+
+  /* .main__circle */
+  &__circle {
+    position: absolute;
+    z-index: -2;
+    border-radius: 50%;
+    border-style: solid;
+    @include adaptiveValue("border-width", 47, 18);
+
+    /* .main__circle_blue */
+    &_blue {
+      @include adaptiveValue("width", 482, 185);
+      @include adaptiveValue("height", 482, 185);
+      @include adaptiveValue("top", -231, -108);
+      @include adaptiveValue("right", 271, 43);
+
+      border-color: $deepskyBlueColor;
+    }
+
+    /* .main__circle_red */
+    &_red {
+      @include adaptiveValue("width", 386, 130);
+      @include adaptiveValue("height", 386, 130);
+      @include adaptiveValue("top", -185, -76);
+      @include adaptiveValue("right", -158, -104);
+
+      border-color: $pastelRedColor;
+    }
+
+    /* .main__circle_green */
+    &_green {
+      @include adaptiveValue("width", 566, 215);
+      @include adaptiveValue("height", 566, 215);
+      @include adaptiveValue("top", 215, 63);
+      @include adaptiveValue("right", -260, -158);
+
+      border-color: $yellowGreenColor;
+    }
+
+    /* .main__circle_amethyst */
+    &_amethyst {
+      @include adaptiveValue("width", 290, 110);
+      @include adaptiveValue("height", 290, 110);
+      @include adaptiveValue("top", 354, 116);
+      @include adaptiveValue("right", 366, 80);
+
+      border-color: $amethystColor;
+    }
+  }
+}
+
+.slogan-main {
+  text-align: center;
+
+  &__title {
+    font-size: rem(40);
+    font-weight: 300;
+    line-height: 113%;
+
+    @include adaptiveValue("font-size", 40, 20, 768, 360, 1);
+  }
+
+  &__text {
+    font-size: rem(30);
+    font-weight: 500;
+    line-height: math.div(38, 30);
+
+    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
+  }
+
+  &__title,
+  &__text {
+    @media (max-width:$mobileSmall) {
+      line-height: math.div(25.64, 20);
+    }
+  }
+}
+
+.scroll-down {
+  text-align: center;
+
+  @media (max-width:$mobile) {
+    opacity: 0;
+  }
+}
+
+//=============FEATURES===========================================================================================================================================
+
+.features {
+  padding: rem(130) 0 rem(266);
+  @include adaptiveValue("padding-top", 130, 37);
+  @include adaptiveValue("padding-bottom", 266, 110);
+
+  /* .features__container */
+  &__container {}
+
+  /* .features__testdrive-link */
+  &__testdrive-link {
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    @include adaptiveValue("padding-left", 95, 40);
+    @include adaptiveValue("padding-right", 20, 9);
+    @include adaptiveValue("margin-bottom", 134, 50);
+
+    text-align: center;
+    background: $greyBlue;
+    border-radius: rem(170);
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 50%;
+      transform: translate(50%, 0);
+      @include adaptiveValue("width", 760, 320);
+      @include adaptiveValue("height", 256, 102);
+
+      border-radius: rem(170);
+
+      background: $testdrive-gradient;
+      // background-size: contain;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('@img/features/decor.svg') no-repeat;
+      background-size: cover;
+      z-index: 10;
+      @include adaptiveValue("width", 737, 320);
+      left: 0;
+      z-index: 2;
+    }
+
+    img {
+      @include adaptiveValue("width", 192, 83);
+      z-index: 5;
+    }
+
+    &,
+    &::after {
+      @include adaptiveValue("width", 737, 320);
+      @include adaptiveValue("height", 234, 102);
+    }
+
+  }
+
+  .features__slogan {
+    font-size: rem(57);
+    font-weight: 450;
+    line-height: math.div(83, 57);
+    color: #FAB8C4;
+    @include adaptiveValue("font-size", 57, 25);
+    z-index: 5;
+
+    span {
+      display: block;
+      font-size: rem(36);
+      font-weight: 400;
+      @include adaptiveValue("font-size", 36, 15);
+    }
+  }
+
+  /* .features__content */
+  &__content {
+    position: relative;
+
+    @media (min-width:$mobile) {
+      &::before {
+        content: '';
+        position: absolute;
+        background: url('@img/lines/line-main.svg') no-repeat;
+        background-size: cover;
+        width: rem(645);
+        height: rem(2703);
+        top: -8%;
+        right: 50%;
+        transform: translate(50%, 0px);
+        z-index: -1;
+      }
+    }
+
+  }
+
+  /* .features__title */
+  &__title {
+    margin-bottom: rem(48);
+  }
+
+  /* .features__items */
+  &__items {
+    display: grid;
+    @include adaptiveValue("row-gap", 140, 70);
+  }
+
+  /* .features__item */
+  &__item {}
+
+  &__line {
+    position: absolute;
+    @include adaptiveValue("top", -192, 494);
+    @include adaptiveValue("right", -427, -254);
+
+    z-index: -1;
+  }
+}
+
+
+.item-features {
+  display: grid;
+  justify-items: center;
+  position: relative;
+
+  @media (max-width:$mobile) {
+    row-gap: rem(26);
+  }
+
+  @media (min-width:$mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: rem(10);
+  }
+
+  /* .item-features__content */
+  &__content {
+    position: relative;
+
+    @media (min-width:$tablet) {
+      &:first-child {
+        padding-right: rem(18);
+        padding-left: rem(77);
+      }
+    }
+  }
+
+  /* .item-features__title */
+  &__title {
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+
+    @include adaptiveValue("font-size", 64, 40);
+    line-height: 1;
+    font-weight: 450;
+
+
+    &_free {
+      display: inline-block;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: 'бесплатно';
+        bottom: -56%;
+        @include adaptiveValue("right", -85, 100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        @include adaptiveValue("width", 147, 78);
+        @include adaptiveValue("height", 38, 16);
+
+        background: linear-gradient(96.03deg, #4CD7AD 18.67%, #17FF2F 109.14%);
+        font-size: rem(24);
+        @include adaptiveValue("font-size", 24, 12.73);
+        font-weight: 400;
+        line-height: math.div(30.77, 24);
+        text-transform: uppercase;
+
+        @media (max-width:$mobile) {
+          right: rem(-37);
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-top: rem(-20);
+    @include adaptiveValue("margin-bottom", 26, 13);
+
+    @include adaptiveValue("font-size", 32, 24);
+    font-weight: 300;
+    line-height: math.div(41, 32);
+  }
+
+  /* .item-features__text */
+  &__text {
+    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 16);
+    font-weight: 400;
+    line-height: math.div(30.77, 24);
+
+    @media (min-width:$mobile) {
+      &_mw410 {
+        max-width: rem(410);
+      }
+
+      &_mw460 {
+        max-width: rem(460);
+      }
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &_circle-red,
+  &_circle-blue,
+  &_circle-ametysth,
+  &_circle-green {
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+
+  &_circle-red {
+    &::before {
+      @include adaptiveValue("width", 150, 100);
+      @include adaptiveValue("height", 150, 100);
+      @include adaptiveValue("right", -61, -67);
+      @include adaptiveValue("bottom", -63, 297);
+      background-color: $pastelRedColor;
+    }
+  }
+
+  &_circle-blue {
+    &::before {
+      @include adaptiveValue("width", 191, 127);
+      @include adaptiveValue("height", 191, 127);
+      @include adaptiveValue("left", -291, -122);
+      @include adaptiveValue("top", -57, -124);
+      background-color: $deepskyBlueColor;
+    }
+  }
+
+  &_circle-ametysth {
+    &::before {
+      @include adaptiveValue("width", 107, 71);
+      @include adaptiveValue("height", 107, 71);
+      @include adaptiveValue("left", 240, -53);
+      @include adaptiveValue("bottom", -143, 257);
+      background-color: $amethystColor;
+    }
+  }
+
+  &_circle-green {
+    &::before {
+      @include adaptiveValue("width", 228, 151);
+      @include adaptiveValue("height", 228, 151);
+      @include adaptiveValue("right", -283, -107);
+      @include adaptiveValue("bottom", 3, 12);
+      background-color: $yellowGreenColor;
+    }
+  }
+
+  /* .item-features__image */
+  &__image {
+    @media (max-width:$mobile) {
+      grid-row-start: 1;
+    }
+
+    img {
+      max-width: 40vw;
+    }
+  }
+}
+
+//==============PRICE==========================================================================================================================================
+
+.page {
+
+  /* .page__price */
+  &__price {}
+}
+
+.price {
+  padding: 0 rem(20);
+
+  /* .price__container */
+  &__container {
+    padding-top: rem(67);
+    @include adaptiveValue("padding-bottom", 76, 170);
+
+    text-align: center;
+
+    /* .price__container_wide */
+    &_wide {
+      position: relative;
+      @include adaptiveValue("border-radius", 144, 20);
+      background: #D8E1E8;
+      overflow: hidden;
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: url('@img/price/01.png') no-repeat;
+        background-size: cover;
+        @include adaptiveValue("width", 698, 343);
+        @include adaptiveValue("height", 598, 294);
+        @include adaptiveValue("top", -113, -73);
+        @include adaptiveValue("right", -189, -97);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background: url('@img/price/02.png') no-repeat;
+        background-size: cover;
+        @include adaptiveValue("width", 702, 324);
+        @include adaptiveValue("height", 400, 185);
+        @include adaptiveValue("left", 0, -56);
+        @include adaptiveValue("bottom", -89, -32);
+      }
+    }
+  }
+
+  /* .price__title */
+  &__title {
+    position: relative;
+    z-index: 11;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 82, 23);
+    }
+  }
+
+  /* .price__list */
+  &__list {
+    position: relative;
+    display: grid;
+    @include adaptiveValue("column-gap", 27, 13);
+    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+    row-gap: rem(13);
+    @include adaptiveValue("margin-bottom", 70, 30);
+
+    z-index: 10;
+  }
+
+  /* .price__item */
+  &__item {}
+
+  /* .price__text */
+  &__text {
+    display: block;
+    @include adaptiveValue("margin-bottom", 27, 10);
+
+    @include adaptiveValue("font-size", 48, 24);
+    font-weight: 450;
+    line-height: 1;
+  }
+
+  /* .price__phone */
+  &__phone {
+    @include adaptiveValue("font-size", 54.5, 35);
+    font-weight: 450;
+    color: $majorelleBlueColor;
+  }
+}
+
+.item-price {
+  @include adaptiveValue("padding-top", 50, 32);
+  @include adaptiveValue("padding-left", 30, 20);
+  @include adaptiveValue("padding-bottom", 58, 25);
+  @include adaptiveValue("padding-right", 30, 20);
+  justify-self: center;
+
+  background-color: $greyBlue;
+  @include adaptiveValue("border-radius", 28, 16.56);
+
+  &:last-child {
+    background-color: $majorelleBlueColor;
+  }
+
+  &:last-child>* {
+    color: #fff;
+  }
+
+  /* .item-price__value */
+  &__value {
+    @include adaptiveValue("font-size", 64, 38);
+    font-weight: 450;
+    line-height: math.div(82, 64);
+    color: #FAB8C4;
+  }
+
+  /* .item-price__day */
+  &__day {
+    display: block;
+    @include adaptiveValue("font-size", 36, 21);
+    font-weight: 400;
+    color: #fff;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 32, 26);
+    }
+  }
+
+  /* .item-price__text */
+  &__text {
+    @include adaptiveValue("font-size", 20, 12);
+    font-weight: 300;
+    line-height: math.div(25.64, 20);
+    color: #ABABAB;
+  }
+
+  @media (max-width:em(360)) {
+    max-width: rem(220);
+  }
+}
