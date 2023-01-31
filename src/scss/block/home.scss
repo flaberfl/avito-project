@@ -153,12 +153,8 @@
 
       /* circle_red */
       &_red {
-        @include adaptiveValue("width", 386, 130);
-        @include adaptiveValue("height", 386, 130);
         @include adaptiveValue("top", -185, -76);
         @include adaptiveValue("right", -158, -104);
-
-        border-color: $pastelRedColor;
       }
 
       /* circle_green */
@@ -217,9 +213,6 @@
   padding: rem(130) 0 rem(266);
   @include adaptiveValue("padding-top", 130, 37);
   @include adaptiveValue("padding-bottom", 266, 110);
-
-  /* .features__container */
-  &__container {}
 
   /* .features__testdrive-link */
   &__testdrive-link {
@@ -320,7 +313,8 @@
   /* .features__items */
   &__items {
     display: grid;
-    @include adaptiveValue("row-gap", 140, 70);
+    // @include adaptiveValue("row-gap", 140, 70);
+    @include adaptiveValue("row-gap", 163, 70);
   }
 
   /* .features__item */
@@ -564,7 +558,7 @@
   }
 
   /* .price__text */
-  &__text {
+  &__label {
     display: block;
     @include adaptiveValue("margin-bottom", 27, 10);
 

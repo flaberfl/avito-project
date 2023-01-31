@@ -1,5 +1,11 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+.logo {
+  img {
+    @include adaptiveValue("width", 320, 200);
+  }
+}
+
 .title {
   font-weight: 600;
   line-height: 1;
