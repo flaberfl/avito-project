@@ -12,4 +12,47 @@
 
   /* .page__page */
   &__page {}
+
+  /* .page__price */
+  &__price {}
+}
+
+.circle {
+  position: absolute;
+  z-index: -2;
+  border-radius: 50%;
+  border-style: solid;
+  @include adaptiveValue("border-width", 47, 18);
+
+  /* circle_blue */
+  &_blue {
+    @include adaptiveValue("width", 482, 185);
+    @include adaptiveValue("height", 482, 185);
+
+    border-color: $deepskyBlueColor;
+  }
+
+  /* circle_red */
+  &_red {
+    @include adaptiveValue("width", 386, 130);
+    @include adaptiveValue("height", 386, 130);
+
+    border-color: $pastelRedColor;
+  }
+
+  /* circle_green */
+  &_green {
+    @include adaptiveValue("width", 566, 215);
+    @include adaptiveValue("height", 566, 215);
+
+    border-color: $yellowGreenColor;
+  }
+
+  /* circle_amethyst */
+  &_amethyst {
+    @include adaptiveValue("width", 290, 110);
+    @include adaptiveValue("height", 290, 110);
+
+    border-color: $amethystColor;
+  }
 }
