@@ -6,26 +6,54 @@
 		</div>
 		<div class="footer__body">
 			<form action="#" class="footer__form form">
-				
+				<h3 class="form__title">Личный кабинет</h3>
+
+				<div class="form__item">
+					<label for="name">Имя</label>
+					<input id="name" autocomplete="off" type="text" name="name" data-error="Не введено имя" placeholder="Ваше имя"
+						class="form__input">
+				</div>
+
+				<div class="form__item">
+					<label for="phone">Телефон</label>
+					<input id="phone" autocomplete="off" type="text" name="phone" data-error="Не введен телефон"
+						placeholder="8 _____________" class="form__input">
+				</div>
+
+				<div class="form__item">
+					<div class="form__checkbox checkbox">
+						<input id="agree" data-error="Не поставили галочку" class="checkbox__input" type="checkbox" value="1" name="agree">
+						<label for="agree" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
+								данных</span></label>
+					</div>
+				</div>
+
+				<div class="form__item">
+					<button type="submit" class="form__button button">Войти</button>
+				</div>
+
 			</form>
-			<div class="footer__text text-footer">
-				<span class="text-footer__label">!</span>
-				<p class="text-footer__text">Покупай подписку,
+			<div class="footer__content content-footer">
+				<span class="content-footer__label">!</span>
+				<p class="content-footer__text">Покупай подписку,
 					работай по собственной базе,
 					комиссия от сдачи полностью твоя,
 					будь независим ни от кого!</p>
 			</div>
-			<div class="footer__bottom">
-				<a href="" class="footer__logo logo">
-					<img src="@img/logo.svg" alt="logo"></a>
-				<p class="footer__copyright">Lorem ipsum dolor sit amet, consectetur</p>
-			</div>
+		</div>
+		<div class="footer__bottom">
+			<a href="" class="footer__logo logo">
+				<img src="@img/logo.svg" alt="logo"></a>
+			<p class="footer__copyright">Lorem ipsum dolor sit amet, consectetur</p>
 		</div>
 		<div class="footer__decor">
 			<div class="circle circle_blue"></div>
 			<div class="circle circle_red"></div>
 			<div class="circle circle_green"></div>
 			<div class="circle circle_amethyst"></div>
+		</div>
+		<div class="footer__image">
+			<img src="@img/human.png" alt="Human">
 		</div>
 	</div>
 </footer>

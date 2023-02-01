@@ -1,64 +1,101 @@
 //====================================================================================================
 .footer {
 
-  /* .footer__container */
-  &__container {}
+  .footer {
 
-  /* .footer__top */
-  &__top {}
+    /* .footer__container */
+    &__container {}
 
-  /* .footer__subtitle */
-  &__subtitle {}
+    /* .footer__top */
+    &__top {}
 
-  /* .footer__title */
-  &__title {}
+    /* .footer__subtitle */
+    &__subtitle {}
 
-  /* .footer__body */
-  &__body {}
+    /* .footer__title */
+    &__title {}
 
-  /* .footer__form */
-  &__form {}
+    /* .footer__body */
+    &__body {}
 
-  /* .footer__text */
-  &__text {}
+    /* .footer__form */
+    &__form {}
 
-  /* .footer__bottom */
-  &__bottom {}
+    /* .footer__content */
+    &__content {}
 
-  /* .footer__logo */
-  &__logo {}
+    /* .footer__bottom */
+    &__bottom {}
 
-  /* .footer__copyright */
-  &__copyright {}
+    /* .footer__logo */
+    &__logo {}
 
-  /* .footer__decor */
-  &__decor {}
+    /* .footer__copyright */
+    &__copyright {}
+
+    /* .footer__decor */
+    &__decor {}
+
+    /* .footer__image */
+    &__image {}
+  }
+
+  .form {
+
+    /* .form__title */
+    &__title {}
+
+    /* .form__item */
+    &__item {}
+
+    /* .form__input */
+    &__input {}
+
+    /* .form__checkbox */
+    &__checkbox {}
+
+    /* .form__button */
+    &__button {}
+  }
+
+  .checkbox {
+
+    /* .checkbox__input */
+    &__input {}
+
+    /* .checkbox__label */
+    &__label {}
+
+    /* .checkbox__text */
+    &__text {}
+  }
+
+  .button {}
+
+  .content-footer {
+
+    /* .content-footer__label */
+    &__label {}
+
+    /* .content-footer__text */
+    &__text {}
+  }
+
+  .logo {}
+
+  .circle {
+
+    /* .circle_blue */
+    &_blue {}
+
+    /* .circle_red */
+    &_red {}
+
+    /* .circle_green */
+    &_green {}
+
+    /* .circle_amethyst */
+    &_amethyst {}
+  }
+
 }
-
-.form {}
-
-.text-footer {
-
-  /* .text-footer__label */
-  &__label {}
-
-  /* .text-footer__text */
-  &__text {}
-}
-
-.circle {
-
-  /* .circle_blue */
-  &_blue {}
-
-  /* .circle_red */
-  &_red {}
-
-  /* .circle_green */
-  &_green {}
-
-  /* .circle_amethyst */
-  &_amethyst {}
-}
-
-//====================================================================================================
