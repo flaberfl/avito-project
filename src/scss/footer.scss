@@ -1,101 +1,148 @@
 //====================================================================================================
+
 .footer {
+  @include adaptiveValue("padding-top", 164, 103);
 
-  .footer {
+  /* .footer__container */
+  &__container {}
 
-    /* .footer__container */
-    &__container {}
-
-    /* .footer__top */
-    &__top {}
-
-    /* .footer__subtitle */
-    &__subtitle {}
-
-    /* .footer__title */
-    &__title {}
-
-    /* .footer__body */
-    &__body {}
-
-    /* .footer__form */
-    &__form {}
-
-    /* .footer__content */
-    &__content {}
-
-    /* .footer__bottom */
-    &__bottom {}
-
-    /* .footer__logo */
-    &__logo {}
-
-    /* .footer__copyright */
-    &__copyright {}
-
-    /* .footer__decor */
-    &__decor {}
-
-    /* .footer__image */
-    &__image {}
+  /* .footer__top */
+  &__top {
+    text-align: center;
   }
 
-  .form {
-
-    /* .form__title */
-    &__title {}
-
-    /* .form__item */
-    &__item {}
-
-    /* .form__input */
-    &__input {}
-
-    /* .form__checkbox */
-    &__checkbox {}
-
-    /* .form__button */
-    &__button {}
+  /* .footer__subtitle */
+  &__subtitle {
+    @include adaptiveValue("font-size", 40, 30);
+    font-weight: 300;
+    line-height: math.div(51.28, 40);
   }
 
-  .checkbox {
-
-    /* .checkbox__input */
-    &__input {}
-
-    /* .checkbox__label */
-    &__label {}
-
-    /* .checkbox__text */
-    &__text {}
+  /* .footer__title */
+  &__title {
+    @include adaptiveValue("font-size", 64, 40);
+    font-weight: 450;
+    line-height: 1;
   }
 
-  .button {}
-
-  .content-footer {
-
-    /* .content-footer__label */
-    &__label {}
-
-    /* .content-footer__text */
-    &__text {}
+  /* .footer__body */
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // justify-items: center;
+    gap: rem(43);
+    @include adaptiveValue("padding-left", 25, 10);
   }
 
-  .logo {}
-
-  .circle {
-
-    /* .circle_blue */
-    &_blue {}
-
-    /* .circle_red */
-    &_red {}
-
-    /* .circle_green */
-    &_green {}
-
-    /* .circle_amethyst */
-    &_amethyst {}
+  /* .footer__form */
+  &__form {
+    @include adaptiveValue("border-radius", 27, 16.647);
+    background-color: #fff;
+    @include adaptiveValue("padding-top", 41, 25);
+    @include adaptiveValue("padding-left", 50, 30);
+    @include adaptiveValue("padding-right", 50, 30);
+    @include adaptiveValue("padding-bottom", 97, 38);
   }
 
+  /* .footer__content */
+  &__content {
+    @include adaptiveValue("padding-left", 70, 28);
+    @include adaptiveValue("padding-right", 70, 28);
+    text-align: center;
+  }
+
+  /* .footer__bottom */
+  &__bottom {}
+
+  /* .footer__logo */
+  &__logo {}
+
+  /* .footer__copyright */
+  &__copyright {}
+
+  /* .footer__decor */
+  &__decor {}
+
+  /* .footer__image */
+  &__image {}
+}
+
+.form {
+
+  /* .form__title */
+  &__title {
+    @include adaptiveValue("font-size", 48, 29.6);
+    line-height: math.div(61.54, 48);
+    text-align: center;
+  }
+
+  /* .form__item */
+  &__item {}
+
+  /* .form__label */
+  &__label {
+    display: block;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 8, 5);
+      margin-bottom: rem(8);
+    }
+  }
+
+
+  /* .form__input */
+  &__input {
+    width: 100%;
+    @include adaptiveValue("padding-left", 24, 15);
+    @include adaptiveValue("padding-right", 24, 15);
+    @include adaptiveValue("height", 60, 37);
+    border: 1px solid #D6E0E7;
+    @include adaptiveValue("border-radius", 15, 9);
+  }
+
+  /* .form__checkbox */
+  &__checkbox {}
+
+  /* .form__button */
+  &__button {}
+}
+
+.checkbox {
+
+  /* .checkbox__input */
+  &__input {}
+
+  /* .checkbox__label */
+  &__label {}
+
+  /* .checkbox__text */
+  &__text {}
+}
+
+.button {}
+
+.content-footer {
+
+  /* .content-footer__label */
+  &__label {}
+
+  /* .content-footer__text */
+  &__text {}
+}
+
+.logo {}
+
+.circle {
+
+  /* .circle_blue */
+  &_blue {}
+
+  /* .circle_red */
+  &_red {}
+
+  /* .circle_green */
+  &_green {}
+
+  /* .circle_amethyst */
+  &_amethyst {}
 }
