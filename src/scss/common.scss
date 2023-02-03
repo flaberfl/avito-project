@@ -35,8 +35,6 @@
     @include adaptiveValue("width", 482, 185);
     @include adaptiveValue("height", 482, 185);
 
-    top: 20%;
-
     border-color: $deepskyBlueColor;
   }
 

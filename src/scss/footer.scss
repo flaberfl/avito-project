@@ -2,6 +2,7 @@
 
 .footer {
   @include adaptiveValue("padding-top", 156, 103);
+  @include adaptiveValue("padding-bottom", 38, 72);
 
   /* .footer__container */
   &__container {
@@ -12,8 +13,8 @@
       position: absolute;
       @include adaptiveValue("width", 1054, 690);
       @include adaptiveValue("height", 1054, 690);
-      bottom: -207px;
-      right: -650px;
+      bottom: -287px;
+      right: -657px;
 
       background-color: #fff;
       border-radius: 50%;
@@ -49,13 +50,24 @@
   /* .footer__body */
   &__body {
     display: grid;
-    grid-template-columns: percent(569, 1170) 1fr;
+
+    @media (min-width:$tablet) {
+      grid-template-columns: percent(569, 1170) 1fr;
+    }
   }
 
   /* .footer__registration */
   &__registration {
-    @include adaptiveValue("padding-left", 25, 20);
-    @include adaptiveValue("padding-right", 25, 20);
+    max-width: 519px;
+
+    @media (max-width:$tablet) {
+      justify-self: center;
+      width: 100%;
+    }
+
+    @media (min-width:$tablet) {
+      padding: 0 rem(25);
+    }
   }
 
   /* .footer__form */
@@ -66,22 +78,31 @@
     @include adaptiveValue("padding-left", 70, 28);
     @include adaptiveValue("padding-right", 70, 28);
     text-align: center;
-  }
 
-  /* .footer__bottom */
-  &__bottom {
-    @include adaptiveValue("padding-top", 274, 274);
-    @include adaptiveValue("padding-bottom", 100, 72);
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+
+    }
   }
 
   /* .footer__logo */
   &__logo {
-    @include adaptiveValue("margin-left", 112, 112);
-    @include adaptiveValue("margin-bottom", 81, 72);
+    @include adaptiveValue("padding-top", 274, 274);
+    @include adaptiveValue("padding-left", 112, 112);
   }
 
   /* .footer__copyright */
-  &__copyright {}
+  &__copyright {
+    @include adaptiveValue("padding-top", 70, 90);
+
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: math.div(20.51, 16);
+
+    @media (min-width:$tablet) {
+      grid-row-start: 3;
+    }
+  }
 
   /* .footer__decor */
   &__decor {
@@ -89,25 +110,25 @@
 
       /* .circle_blue */
       &_blue {
-        bottom: 432px;
+        bottom: 351px;
         left: -522px;
       }
 
       /* .circle_red */
       &_red {
-        bottom: 481px;
+        bottom: 401px;
         left: 2px;
       }
 
       /* .circle_green */
       &_green {
-        bottom: -99px;
+        bottom: -180px;
         left: -76px;
       }
 
       /* .circle_amethyst */
       &_amethyst {
-        bottom: 38px;
+        bottom: -43px;
         left: -425px;
       }
     }
@@ -118,14 +139,14 @@
     position: absolute;
     @include adaptiveValue("width", 644, 294);
     @include adaptiveValue("height", 743, 339);
-    bottom: -8px;
+    bottom: -89px;
     right: -130px;
   }
 }
 
 .form {
   position: relative;
-  @include adaptiveValue("max-width", 519, 320);
+  // @include adaptiveValue("max-width", 519, 320);
   @include adaptiveValue("border-radius", 27, 16.647);
   @include adaptiveValue("padding-top", 41, 25);
   @include adaptiveValue("padding-left", 50, 30);
@@ -214,8 +235,11 @@
     align-items: center;
     padding: 0;
     width: 100%;
-
     @include adaptiveValue("height", 65, 40);
+    @include adaptiveValue("border-radius", 21, 13);
+
+    @include adaptiveValue("font-size", 24, 15);
+    font-weight: 450;
   }
 }
 
@@ -243,7 +267,7 @@
 
   /* .content-footer__text */
   &__text {
-    @include adaptiveValue("font-size", 30, 30);
+    @include adaptiveValue("font-size", 30, 18);
     line-height: math.div(38.46, 30);
   }
 }
