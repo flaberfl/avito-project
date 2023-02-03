@@ -71,19 +71,47 @@
   /* .footer__bottom */
   &__bottom {
     @include adaptiveValue("padding-top", 274, 274);
-    @include adaptiveValue("padding-bottom", 27, 72);
+    @include adaptiveValue("padding-bottom", 100, 72);
   }
 
   /* .footer__logo */
   &__logo {
     @include adaptiveValue("margin-left", 112, 112);
+    @include adaptiveValue("margin-bottom", 81, 72);
   }
 
   /* .footer__copyright */
   &__copyright {}
 
   /* .footer__decor */
-  &__decor {}
+  &__decor {
+    .circle {
+
+      /* .circle_blue */
+      &_blue {
+        bottom: 432px;
+        left: -522px;
+      }
+
+      /* .circle_red */
+      &_red {
+        bottom: 481px;
+        left: 2px;
+      }
+
+      /* .circle_green */
+      &_green {
+        bottom: -99px;
+        left: -76px;
+      }
+
+      /* .circle_amethyst */
+      &_amethyst {
+        bottom: 38px;
+        left: -425px;
+      }
+    }
+  }
 
   /* .footer__image */
   &__image {
@@ -217,32 +245,5 @@
   &__text {
     @include adaptiveValue("font-size", 30, 30);
     line-height: math.div(38.46, 30);
-  }
-}
-
-.circle {
-
-  /* .circle_blue */
-  &_blue {
-    bottom: 432px;
-    left: -522px;
-  }
-
-  /* .circle_red */
-  &_red {
-    bottom: 481px;
-    left: 2px;
-  }
-
-  /* .circle_green */
-  &_green {
-    bottom: -99px;
-    left: -76px;
-  }
-
-  /* .circle_amethyst */
-  &_amethyst {
-    bottom: 38px;
-    left: -425px;
   }
 }
