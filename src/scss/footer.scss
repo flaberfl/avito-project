@@ -1,8 +1,8 @@
 //====================================================================================================
 
 .footer {
-  @include adaptiveValue("padding-top", 156, 103);
-  @include adaptiveValue("padding-bottom", 38, 72);
+  @include adaptiveValue("padding-bottom", 38, 75);
+  @include adaptiveValue("padding-top", 274, 60);
 
   /* .footer__container */
   &__container {
@@ -13,123 +13,84 @@
       position: absolute;
       @include adaptiveValue("width", 1054, 690);
       @include adaptiveValue("height", 1054, 690);
-      bottom: -287px;
-      right: -657px;
+      @include adaptiveValue("bottom", -287, -297);
+      @include adaptiveValue("right", -657, -457);
 
       background-color: #fff;
       border-radius: 50%;
-      z-index: -1;
-    }
-  }
-
-  /* .footer__top */
-  &__top {
-    @include adaptiveValue("margin-bottom", 94, 9);
-
-    text-align: center;
-  }
-
-  /* .footer__subtitle */
-  &__subtitle {
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 26, 9);
-    }
-
-    @include adaptiveValue("font-size", 40, 30);
-    font-weight: 300;
-    line-height: math.div(51.28, 40);
-  }
-
-  /* .footer__title */
-  &__title {
-    @include adaptiveValue("font-size", 64, 40);
-    font-weight: 450;
-    line-height: 1;
-  }
-
-  /* .footer__body */
-  &__body {
-    display: grid;
-
-    @media (min-width:$tablet) {
-      grid-template-columns: percent(569, 1170) 1fr;
-    }
-  }
-
-  /* .footer__registration */
-  &__registration {
-    max-width: 519px;
-
-    @media (max-width:$tablet) {
-      justify-self: center;
-      width: 100%;
-    }
-
-    @media (min-width:$tablet) {
-      padding: 0 rem(25);
-    }
-  }
-
-  /* .footer__form */
-  &__form {}
-
-  /* .footer__content */
-  &__content {
-    @include adaptiveValue("padding-left", 70, 28);
-    @include adaptiveValue("padding-right", 70, 28);
-    text-align: center;
-
-    @media (max-width:$tablet) {
-      grid-row-start: 1;
-
+      z-index: -3;
     }
   }
 
   /* .footer__logo */
   &__logo {
-    @include adaptiveValue("padding-top", 274, 274);
-    @include adaptiveValue("padding-left", 112, 112);
+    position: relative;
+    z-index: 10;
+
+    @media (min-width:$tablet) {
+      padding-left: rem(98);
+    }
+
+    img {
+      width: 308px;
+    }
   }
 
   /* .footer__copyright */
   &__copyright {
-    @include adaptiveValue("padding-top", 70, 90);
+    @include adaptiveValue("padding-top", 70, 326);
 
-    font-size: rem(16);
-    font-weight: 300;
-    line-height: math.div(20.51, 16);
-
-    @media (min-width:$tablet) {
-      grid-row-start: 3;
+    @media (max-width:$tablet) {
+      text-align: center;
     }
+
+    p {
+      font-size: rem(16);
+      font-weight: 300;
+      line-height: math.div(20.51, 16);
+    }
+
   }
 
   /* .footer__decor */
   &__decor {
     .circle {
+      @include adaptiveValue("border-width", 47, 22);
 
       /* .circle_blue */
       &_blue {
-        bottom: 351px;
-        left: -522px;
+        @include adaptiveValue("width", 482, 228);
+        @include adaptiveValue("height", 482, 228);
+        @include adaptiveValue("bottom", 351, 107);
+        @include adaptiveValue("left", -522, -115);
       }
 
       /* .circle_red */
       &_red {
-        bottom: 401px;
-        left: 2px;
+        @include adaptiveValue("bottom", 401, 131);
+        @include adaptiveValue("left", 2, 131);
+        @include adaptiveValue("width", 386, 182);
+        @include adaptiveValue("height", 386, 182);
       }
 
       /* .circle_green */
       &_green {
-        bottom: -180px;
-        left: -76px;
+        @include adaptiveValue("width", 566, 266);
+        @include adaptiveValue("height", 566, 266);
+        @include adaptiveValue("bottom", -180, -142);
+        @include adaptiveValue("left", -76, 97);
       }
 
       /* .circle_amethyst */
       &_amethyst {
+        @include adaptiveValue("width", 290, 134);
+        @include adaptiveValue("height", 290, 134);
+        @include adaptiveValue("bottom", -43, -77);
+        @include adaptiveValue("left", -425, -66);
         bottom: -43px;
         left: -425px;
+        bottom: -77px;
+        left: -66px;
       }
     }
   }
@@ -137,137 +98,15 @@
   /* .footer__image */
   &__image {
     position: absolute;
-    @include adaptiveValue("width", 644, 294);
-    @include adaptiveValue("height", 743, 339);
     bottom: -89px;
     right: -130px;
-  }
-}
+    bottom: -113px;
+    right: 34px;
 
-.form {
-  position: relative;
-  // @include adaptiveValue("max-width", 519, 320);
-  @include adaptiveValue("border-radius", 27, 16.647);
-  @include adaptiveValue("padding-top", 41, 25);
-  @include adaptiveValue("padding-left", 50, 30);
-  @include adaptiveValue("padding-right", 50, 30);
-  @include adaptiveValue("padding-bottom", 61, 38);
+    img {
+      @include adaptiveValue("width", 644, 294);
+      @include adaptiveValue("height", 743, 339);
 
-  background-color: #fff;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    left: 0;
-    @include adaptiveValue("bottom", -36, -22);
-
-    background-color: #DCDCDC;
-    opacity: .5;
-    @include adaptiveValue("border-radius", 27, 16.647);
-    filter: blur(rem(22));
-    z-index: -1;
-  }
-
-  /* .form__title */
-  &__title {
-    @include adaptiveValue("margin-bottom", 23, 9);
-
-    @include adaptiveValue("font-size", 48, 29.6);
-    line-height: math.div(61.54, 48);
-    text-align: center;
-  }
-
-  /* .form__item */
-  &__item {
-    &_name {
-      &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 18, 9);
-      }
     }
-
-    &_phone {
-      &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 25, 15);
-      }
-    }
-
-    &_checkbox {
-      @include adaptiveValue("margin-bottom", 34, 15);
-    }
-  }
-
-  /* .form__label */
-  &__label {
-    display: block;
-
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 11, 5);
-    }
-  }
-
-
-  /* .form__input */
-  &__input {
-    width: 100%;
-    @include adaptiveValue("padding-left", 24, 15);
-    @include adaptiveValue("padding-right", 24, 15);
-    @include adaptiveValue("height", 60, 37);
-
-    border: 1px solid #D6E0E7;
-    @include adaptiveValue("border-radius", 15, 9);
-
-    &::placeholder {
-      @include adaptiveValue("font-size", 20, 12);
-      font-weight: 300;
-      line-height: math.div(25.64, 20);
-    }
-  }
-
-  /* .form__checkbox */
-  &__checkbox {}
-
-  /* .form__button */
-  &__button {
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-    @include adaptiveValue("height", 65, 40);
-    @include adaptiveValue("border-radius", 21, 13);
-
-    @include adaptiveValue("font-size", 24, 15);
-    font-weight: 450;
-  }
-}
-
-.content-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /* .content-footer__label */
-  &__label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include adaptiveValue("width", 100, 61);
-    @include adaptiveValue("height", 100, 61);
-    @include adaptiveValue("margin-bottom", 17, 10);
-
-    background-color: $deepskyBlueColor;
-    border-radius: 50%;
-
-    @include adaptiveValue("font-size", 64, 39);
-    font-weight: 600;
-    color: #fff;
-  }
-
-  /* .content-footer__text */
-  &__text {
-    @include adaptiveValue("font-size", 30, 18);
-    line-height: math.div(38.46, 30);
   }
 }

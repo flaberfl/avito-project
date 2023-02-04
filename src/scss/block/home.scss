@@ -624,3 +624,200 @@
     max-width: rem(220);
   }
 }
+
+//=======REGISTRATION=================================================================================================================================================
+
+.registration {
+  @include adaptiveValue("padding-top", 156, 103);
+
+  /* .registration__container */
+  &__container {}
+
+  /* .registration__subtitle */
+  &__subtitle {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 26, 31);
+    }
+
+    text-align: center;
+
+    @include adaptiveValue("font-size", 40, 30);
+    font-weight: 300;
+    line-height: math.div(51.28, 40);
+  }
+
+  /* .registration__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 94, 42);
+
+    @include adaptiveValue("font-size", 64, 40);
+    font-weight: 450;
+    line-height: 1;
+    text-align: center;
+  }
+
+  /* .registration__body */
+  &__body {
+    display: grid;
+    row-gap: rem(49);
+
+    @media (min-width:$tablet) {
+      grid-template-columns: percent(569, 1170) 1fr;
+    }
+  }
+
+  /* .registration__order */
+  &__order {
+
+    @media (max-width:$tablet) {
+      max-width: 519px;
+      justify-self: center;
+      width: 100%;
+    }
+
+    @media (min-width:$tablet) {
+      padding: 0 rem(25);
+    }
+  }
+
+  /* .registration__form */
+  &__form {}
+
+  /* .registration__content */
+  &__content {
+    @include adaptiveValue("padding-left", 70, 28);
+    @include adaptiveValue("padding-right", 70, 28);
+    text-align: center;
+
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+    }
+  }
+}
+
+.form {
+  position: relative;
+  @include adaptiveValue("border-radius", 27, 16.647);
+  @include adaptiveValue("padding-top", 41, 25);
+  @include adaptiveValue("padding-left", 50, 30);
+  @include adaptiveValue("padding-right", 50, 30);
+  @include adaptiveValue("padding-bottom", 61, 38);
+
+  background-color: #fff;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+    @include adaptiveValue("bottom", -36, -22);
+
+    background-color: #DCDCDC;
+    opacity: .5;
+    @include adaptiveValue("border-radius", 27, 16.647);
+    filter: blur(rem(22));
+    z-index: -1;
+  }
+
+  /* .form__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 23, 9);
+
+    @include adaptiveValue("font-size", 48, 29.6);
+    line-height: math.div(61.54, 48);
+    text-align: center;
+  }
+
+  /* .form__item */
+  &__item {
+    &_name {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 15, 9);
+      }
+    }
+
+    &_phone {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 25, 15);
+      }
+    }
+
+    &_checkbox {
+      @include adaptiveValue("margin-bottom", 36, 15);
+    }
+  }
+
+  /* .form__label */
+  &__label {
+    display: block;
+
+    @include adaptiveValue("font-size", 24, 15);
+    line-height: math.div(30.77, 24);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 5, 5);
+    }
+  }
+
+  /* .form__input */
+  &__input {
+    width: 100%;
+    @include adaptiveValue("padding-left", 24, 15);
+    @include adaptiveValue("padding-right", 24, 15);
+    @include adaptiveValue("height", 60, 37);
+
+    border: 1px solid #D6E0E7;
+    @include adaptiveValue("border-radius", 15, 9);
+    @include adaptiveValue("font-size", 20, 12);
+
+    &::placeholder {
+      @include adaptiveValue("font-size", 20, 12);
+      font-weight: 300;
+      line-height: math.div(25.64, 20);
+    }
+  }
+
+  /* .form__button */
+  &__button {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    @include adaptiveValue("height", 65, 40);
+    @include adaptiveValue("border-radius", 21, 13);
+
+    @include adaptiveValue("font-size", 24, 15);
+    font-weight: 450;
+  }
+}
+
+.content-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* .content-registration__label */
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("width", 100, 61);
+    @include adaptiveValue("height", 100, 61);
+    @include adaptiveValue("margin-bottom", 17, 10);
+
+    background-color: $deepskyBlueColor;
+    border-radius: 50%;
+
+    @include adaptiveValue("font-size", 64, 39);
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* .content-registration__text */
+  &__text {
+    @include adaptiveValue("font-size", 30, 18);
+    line-height: math.div(38.46, 30);
+  }
+}
