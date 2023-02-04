@@ -38,6 +38,8 @@
 
   /* .footer__copyright */
   &__copyright {
+    position: relative;
+    z-index: 10;
     @include adaptiveValue("padding-top", 70, 326);
 
     @media (max-width:$tablet) {
@@ -98,10 +100,8 @@
   /* .footer__image */
   &__image {
     position: absolute;
-    bottom: -89px;
-    right: -130px;
-    bottom: -113px;
-    right: 34px;
+    @include adaptiveValue("bottom", -89, -113);
+    @include adaptiveValue("right", -130, 34);
 
     img {
       @include adaptiveValue("width", 644, 294);
