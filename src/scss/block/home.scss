@@ -241,7 +241,6 @@
       border-radius: rem(170);
 
       background: $testdrive-gradient;
-      // background-size: contain;
       z-index: -1;
     }
 
@@ -312,7 +311,6 @@
   /* .features__items */
   &__items {
     display: grid;
-    // @include adaptiveValue("row-gap", 140, 70);
     @include adaptiveValue("row-gap", 163, 70);
   }
 
@@ -436,6 +434,8 @@
       position: absolute;
       border-radius: 50%;
       z-index: -1;
+      // opacity: 0;
+      transition: all 2s ease-in-out 0s;
     }
   }
 
@@ -446,7 +446,16 @@
       @include adaptiveValue("right", -61, -67);
       @include adaptiveValue("bottom", -63, 297);
       background-color: $pastelRedColor;
+      opacity: 0;
     }
+
+    &._watcher-view {
+      &::before {
+        transform: translate(200px, 0px);
+        opacity: 1;
+      }
+    }
+
   }
 
   &_circle-blue {
@@ -456,6 +465,13 @@
       @include adaptiveValue("left", -291, -122);
       @include adaptiveValue("top", -57, -124);
       background-color: $deepskyBlueColor;
+    }
+
+    &._watcher-view {
+      &::before {
+        opacity: 1;
+        transform: translate(200px, 0px);
+      }
     }
   }
 
@@ -467,6 +483,13 @@
       @include adaptiveValue("bottom", -143, 257);
       background-color: $amethystColor;
     }
+
+    &._watcher-view {
+      &::before {
+        transform: translate(0px, -50px);
+        opacity: 1;
+      }
+    }
   }
 
   &_circle-green {
@@ -477,10 +500,20 @@
       @include adaptiveValue("bottom", 3, 12);
       background-color: $yellowGreenColor;
     }
+
+    &._watcher-view {
+      &::before {
+        transform: translate(0px, 100px);
+        opacity: 1;
+      }
+    }
   }
 
   /* .item-features__image */
   &__image {
+    position: relative;
+    z-index: -1;
+
     @media (max-width:$mobile) {
       grid-row-start: 1;
     }
@@ -519,6 +552,9 @@
         @include adaptiveValue("height", 598, 294);
         @include adaptiveValue("top", -113, -73);
         @include adaptiveValue("right", -189, -97);
+
+        transition: transform 2s ease 0s;
+        transform: scale(2);
       }
 
       &::before {
@@ -530,6 +566,13 @@
         @include adaptiveValue("height", 400, 185);
         @include adaptiveValue("left", 0, -56);
         @include adaptiveValue("bottom", -89, -32);
+      }
+
+      &._watcher-view {
+
+        &::after {
+          transform: scale(1);
+        }
       }
     }
   }
@@ -558,19 +601,24 @@
 
   /* .price__text */
   &__label {
-    display: block;
     @include adaptiveValue("margin-bottom", 27, 10);
 
     @include adaptiveValue("font-size", 48, 24);
-    font-weight: 450;
     line-height: 1;
   }
 
   /* .price__phone */
   &__phone {
     @include adaptiveValue("font-size", 54.5, 35);
-    font-weight: 450;
     color: $majorelleBlueColor;
+  }
+
+  &__label,
+  &__phone {
+    display: block;
+    position: relative;
+    z-index: 10;
+    font-weight: 450;
   }
 }
 
@@ -630,9 +678,6 @@
 .registration {
   @include adaptiveValue("padding-top", 156, 103);
 
-  /* .registration__container */
-  &__container {}
-
   /* .registration__subtitle */
   &__subtitle {
     &:not(:last-child) {
@@ -679,9 +724,6 @@
       padding: 0 rem(25);
     }
   }
-
-  /* .registration__form */
-  &__form {}
 
   /* .registration__content */
   &__content {

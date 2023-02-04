@@ -67,7 +67,7 @@
   Документация: 
   Сниппет (HTML): 
   */
-  // import './libs/parallax-mouse.js'
+  import './libs/parallax-mouse.js'
 
   // ========================================================================================================================================================================================================================================================
   // Работа с формами ========================================================================================================================================================================================================================================================
@@ -150,7 +150,7 @@
   // Наблюдатель за объектами c атрибутом data-watch
   // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
   // Сниппет(HTML):
-  // import './libs/watcher.js'
+  import './libs/watcher.js'
 
   // Модуль поэкранного скролла
   // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
@@ -160,7 +160,7 @@
   // Модуль паралакса
   // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
   // Сниппет(HTML):
-  // import "./libs/parallax.js";
+  import "./libs/parallax.js";
 
   // Функции работы скроллом
   import * as flsScroll from "./files/scroll/scroll.js";

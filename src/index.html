@@ -10,7 +10,7 @@
 		<main class="page">
 
 			<section class="page__page main">
-				<div class="main__container">
+				<div data-prlx-parent class="main__container">
 					<div class="main__slogan slogan-main">
 						<h2 class="slogan-main__title">Занимаешься арендой?</h2>
 						<p class="slogan-main__text">Тогда это твой шанс стать независимым!</p>
@@ -25,15 +25,20 @@
 						<button class="main__button button" type="button">Зарегистрируйся</button>
 					</div>
 
-					<img class="main__line" src="@img/lines/line-1.svg" alt="Main line">
-					<img class="main__image" src="@img/main-banner.png" alt="Main banner">
+					<img data-coefficient="100" data-prlx data-direction="-1" class="main__line" src="@img/lines/line-1.svg"
+						alt="Main line">
+					<img data-coefficient="100" data-prlx data-direction="1" class="main__image" src="@img/main-banner.png"
+						alt="Main banner">
 
 					<div class="main__decor">
-						<div class="circle circle_blue"></div>
-						<div class="main__circle circle circle_red"></div>
-						<div class="main__circle circle circle_green"></div>
-						<div class="main__circle circle circle_amethyst"></div>
+						<div data-prlx-mouse data-prlx-cx="50" data-prlx-cy="50" data-prlx-a="300" class="circle circle_blue"></div>
+						<div data-prlx-mouse data-prlx-cx="30" data-prlx-cy="30" data-prlx-dxr data-prlx-dxy
+							class="circle circle_red"></div>
+						<div data-prlx-mouse data-prlx-cx="50" data-prlx-cy="50" class="circle circle_green"></div>
+						<div data-prlx-mouse data-prlx-cx="30" data-prlx-cy="30" data-prlx-dxr data-prlx-dxy
+							class="circle circle_amethyst"></div>
 					</div>
+
 					<div class="scroll-down">
 						<img src="@img/scroll.svg" alt="">
 					</div>
@@ -51,10 +56,10 @@
 						<img src="@img/features/ruble.png" alt="иконка ₽">
 					</a>
 
-					<div class="features__content">
+					<div data-prlx-parent class="features__content">
 						<h2 class="features__title title">Преимущества</h2>
 						<ul class="features__items">
-							<li class="features__item item-features item-features_circle-red">
+							<li data-watch data-watch-margin="-250px" class="features__item item-features item-features_circle-red">
 								<div class="item-features__content">
 									<h3 class="item-features__title">Автодозвон</h3>
 									<h4 class="item-features__subtitle">входит в стоимость подписки!</h4>
@@ -63,12 +68,12 @@
 										(Работает только на ноутбуке или
 										компьютере)</p>
 								</div>
-								<div class="item-features__image">
+								<div data-coefficient="100" data-prlx data-direction="-1" class="item-features__image">
 									<img src="@img/features/01.png" alt="Преимущества картинка">
 								</div>
 							</li>
 							<li class="features__item item-features">
-								<div class="item-features__image">
+								<div data-coefficient="100" data-prlx data-direction="1" class="item-features__image">
 									<img src="@img/features/02.png" alt="Преимущества картинка">
 								</div>
 								<div class="item-features__content">
@@ -79,7 +84,7 @@
 										Больше не нужно менять симку!</p>
 								</div>
 							</li>
-							<li class="features__item item-features item-features_circle-blue">
+							<li data-watch class="features__item item-features item-features_circle-blue">
 								<div class="item-features__content">
 									<h3 class="item-features__title">Установим телефонию</h3>
 									<p class="item-features__text item-features__text_mw460">Если ты хочешь звонить с компьютера <br>
@@ -88,12 +93,12 @@
 											чем обычные</span>, к тому же, <span>они в разы дешевле!</span>
 										Будь на шаг впереди!</p>
 								</div>
-								<div class="item-features__image">
+								<div data-coefficient="100" data-prlx data-direction="-1" class="item-features__image">
 									<img src="@img/features/03.png" alt="Преимущества картинка">
 								</div>
 							</li>
-							<li class="features__item item-features item-features_circle-ametysth">
-								<div class="item-features__image">
+							<li data-watch class="features__item item-features item-features_circle-ametysth">
+								<div data-coefficient="100" data-prlx data-direction="1" class="item-features__image">
 									<img src="@img/features/04.png" alt="Преимущества картинка">
 								</div>
 								<div class="item-features__content">
@@ -104,16 +109,17 @@
 										терять
 										концентрацию!</p>
 								</div>
-								<img class="features__line" src="@img/lines/line-2.svg" alt="decor">
+								<img data-coefficient="100" data-prlx data-direction="1" class="features__line"
+									src="@img/lines/line-2.svg" alt="decor">
 							</li>
-							<li class="features__item item-features item-features_circle-green">
+							<li data-watch class="features__item item-features item-features_circle-green">
 								<div class="item-features__content">
 									<h3 class="item-features__title">Фильтры</h3>
 									<p class="item-features__text">Можно выбрать параметры, цену или просмотры, и отобразить в программе
 										только нужные тебе объявления! А так же много других <span>функций</span>, которые помогут тебе в
 										работе!</p>
 								</div>
-								<div class="item-features__image">
+								<div data-coefficient="100" data-prlx data-direction="-1" class="item-features__image">
 									<img src="@img/features/05.png" alt="Преимущества картинка">
 								</div>
 							</li>
@@ -123,23 +129,23 @@
 			</section>
 
 			<section class="page__price price">
-				<div class="price__container price__container_wide">
-					<div class="price__container">
+				<div data-watch class="price__container price__container_wide">
+					<div data-prlx-parent class="price__container">
 						<div class="price__title title">Прайс</div>
 						<ul class="price__list">
-							<li class="price__item item-price">
+							<li data-coefficient="100" data-prlx data-direction="-1" class="price__item item-price">
 								<div class="item-price__value">1500₽</div>
 								<span class="item-price__day">день</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
 									egestas id. </p>
 							</li>
-							<li class="price__item item-price">
+							<li data-coefficient="100" data-prlx data-direction="1" class="price__item item-price">
 								<div class="item-price__value">12 000₽</div>
 								<span class="item-price__day">неделя</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
 									egestas id.</p>
 							</li>
-							<li class="price__item item-price">
+							<li data-coefficient="100" data-prlx data-direction="-1" class="price__item item-price">
 								<div class="item-price__value">40 000₽</div>
 								<span class="item-price__day">месяц</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
@@ -148,7 +154,6 @@
 						</ul>
 						<span class="price__label">бесплатная консультация</span>
 						<a href="88007775511" class="price__phone">8 (800) 777-55-11
-							<!-- store@anatomiyasna.ru -->
 						</a>
 					</div>
 				</div>
@@ -168,14 +173,14 @@
 
 								<div class="form__item form__item_name">
 									<label class="form__label" for="name">Имя</label>
-									<input id="name" autocomplete="off" type="text" name="name" data-error="Не введено имя"
+									<input id="name" autocomplete="off" type="text" name="name" data-required data-error="Не введено имя"
 										placeholder="Ваше имя" class="form__input">
 								</div>
 
 								<div class="form__item form__item_phone">
 									<label class="form__label" for="phone">Телефон</label>
-									<input id="phone" autocomplete="off" type="text" name="phone" data-error="Не введен телефон"
-										placeholder="8 _____________" class="form__input">
+									<input id="phone" autocomplete="off" type="text" name="phone" data-required="phone"
+										data-error="Не введен телефон" placeholder="8 _____________" class="form__input">
 								</div>
 
 								<div class="form__item form__item_checkbox">
@@ -194,8 +199,8 @@
 							</form>
 						</div>
 
-						<div class="registration__content content-registration">
-							<div class="content-registration__label">!</div>
+						<div data-prlx-parent class="registration__content content-registration">
+							<div data-coefficient="300" data-prlx data-direction="1" class="content-registration__label">!</div>
 							<div class="content-registration__text">
 								<p>Покупай подписку,</p>
 								<p>работай по собственной базе,</p>
