@@ -591,12 +591,26 @@
   &__list {
     position: relative;
     display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(rem(275), 1fr));
     @include adaptiveValue("column-gap", 27, 13);
-    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
     row-gap: rem(13);
     @include adaptiveValue("margin-bottom", 70, 30);
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
 
     z-index: 10;
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @media (max-width:$tablet) {
+      grid-column: 6 span;
+    }
+
+    @media (max-width:$mobile) {
+      grid-column: 12 span;
+    }
   }
 
   /* .price__text */
@@ -623,17 +637,23 @@
 }
 
 .item-price {
+  max-width: rem(372);
   @include adaptiveValue("padding-top", 50, 32);
   @include adaptiveValue("padding-left", 30, 20);
   @include adaptiveValue("padding-bottom", 58, 25);
   @include adaptiveValue("padding-right", 30, 20);
-  justify-self: center;
 
   background-color: $greyBlue;
   @include adaptiveValue("border-radius", 28, 16.56);
 
   &:last-child {
     background-color: $majorelleBlueColor;
+
+    @media (max-width:$tablet) and (min-width: $mobile) {
+      grid-column: 6 span;
+      grid-column-start: 4;
+      grid-column-end: 10;
+    }
   }
 
   &:last-child>* {
@@ -819,6 +839,11 @@
       font-weight: 300;
       line-height: math.div(25.64, 20);
     }
+  }
+
+  &__error {
+    @include adaptiveValue("font-size", 20, 12);
+    color: red;
   }
 
   /* .form__button */

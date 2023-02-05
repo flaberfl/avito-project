@@ -133,19 +133,19 @@
 					<div data-prlx-parent class="price__container">
 						<div class="price__title title">Прайс</div>
 						<ul class="price__list">
-							<li data-coefficient="100" data-prlx data-direction="-1" class="price__item item-price">
+							<li class="price__item item-price">
 								<div class="item-price__value">1500₽</div>
 								<span class="item-price__day">день</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
 									egestas id. </p>
 							</li>
-							<li data-coefficient="100" data-prlx data-direction="1" class="price__item item-price">
+							<li class="price__item item-price">
 								<div class="item-price__value">12 000₽</div>
 								<span class="item-price__day">неделя</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
 									egestas id.</p>
 							</li>
-							<li data-coefficient="100" data-prlx data-direction="-1" class="price__item item-price">
+							<li class="price__item item-price">
 								<div class="item-price__value">40 000₽</div>
 								<span class="item-price__day">месяц</span>
 								<p class="item-price__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel et id velit
@@ -168,7 +168,7 @@
 
 						<div class="registration__order">
 
-							<form action="#" class="registration__form form">
+							<form action="#!" class="registration__form form">
 								<h3 class="form__title">Личный кабинет</h3>
 
 								<div class="form__item form__item_name">
@@ -179,13 +179,13 @@
 
 								<div class="form__item form__item_phone">
 									<label class="form__label" for="phone">Телефон</label>
-									<input id="phone" autocomplete="off" type="text" name="phone" data-required="phone"
-										data-error="Не введен телефон" placeholder="8 _____________" class="form__input">
+									<input data-inputmask="'mask': '+7(999)-9999999'" id="phone" autocomplete="off" type="tel" name="phone" data-required="phone"
+										data-error="Не введен телефон" placeholder="+7 (___)_______" class="form__input">
 								</div>
 
 								<div class="form__item form__item_checkbox">
 									<div class="form__checkbox checkbox">
-										<input id="agree" data-error="Не поставили галочку" class="checkbox__input" type="checkbox"
+										<input id="agree" data-required data-error="Не поставили галочку" class="checkbox__input" type="checkbox"
 											value="1" name="agree">
 										<label for="agree" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
 												данных</span></label>

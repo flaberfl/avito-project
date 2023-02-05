@@ -80,7 +80,7 @@
 
   /* Oтправка формы */
   /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-  // flsForms.formSubmit();
+  flsForms.formSubmit();
 
   /* Модуль формы "колличество" */
   // flsForms.formQuantity();
@@ -98,7 +98,7 @@
   Документация плагина: https://github.com/RobinHerbots/inputmask
   Сниппет(HTML):
   */
-  // import "./files/forms/inputmask.js";
+  import "./files/forms/inputmask.js";
 
   /* Модуль работы с ползунком */
   /*
