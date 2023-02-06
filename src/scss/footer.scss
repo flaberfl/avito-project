@@ -94,10 +94,6 @@
         @include adaptiveValue("height", 290, 134);
         @include adaptiveValue("bottom", -43, -77);
         @include adaptiveValue("left", -425, -66);
-        bottom: -43px;
-        left: -425px;
-        bottom: -77px;
-        left: -66px;
       }
     }
   }
@@ -114,7 +110,6 @@
     img {
       @include adaptiveValue("width", 644, 294);
       @include adaptiveValue("height", 743, 339);
-
     }
   }
 }

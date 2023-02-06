@@ -3,8 +3,9 @@
 .header {
   position: absolute;
   width: 100%;
-  z-index: 50;
   @include adaptiveValue("padding-top", 39, 30);
+  
+  z-index: 50;
 
   /* .header__container */
   &__container {

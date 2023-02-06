@@ -19,8 +19,9 @@
 
   /* .main__content */
   &__content {
-    text-align: center;
     position: relative;
+
+    text-align: center;
 
     @media (min-width:$mobile) {
       max-width: rem(600);
@@ -32,6 +33,7 @@
     position: absolute;
     top: rem(140);
     right: rem(-93);
+
     z-index: -1;
 
     @media (min-width: em(768)) and (max-width: em(1040)) {
@@ -61,7 +63,7 @@
 
   /* .main__subtitle */
   &__subtitle {
-    font-size: rem(30);
+    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
     line-height: .7;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -70,8 +72,6 @@
       @include adaptiveValue("margin-bottom", 23, 14, 768, 360, 1);
     }
 
-    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
-
     @media (max-width:$mobileSmall) {
       line-height: 1;
     }
@@ -79,10 +79,10 @@
 
   /* .main__title */
   &__title {
-    line-height: 1;
-    font-weight: 500;
-
     @include adaptiveValue("font-size", 80, 40, 768, 360, 1);
+    font-weight: 500;
+    line-height: 1;
+
 
     &:not(:last-child) {
       margin-bottom: rem(28);
@@ -95,11 +95,11 @@
     }
 
     span {
-      line-height: 1;
-      color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
       background-image: linear-gradient(95.98deg, #A169F7 1.6%, #00AAFF 24.24%, #FF6163 50.71%, #97CF26 68.48%);
+      line-height: 1;
+      color: transparent;
 
       @media (max-width:$mobile) {
         display: block;
@@ -127,10 +127,10 @@
   }
 
   &__button {
-    line-height: math.div(31, 24);
-
     box-shadow: 0px 18px 28px 1px rgba(89, 86, 233, 0.5);
     transition: all 0.3s ease 0s;
+
+    line-height: math.div(31, 24);
 
     @media (any-hover: hover) {
       &:hover {
@@ -176,19 +176,15 @@
   text-align: center;
 
   &__title {
-    font-size: rem(40);
+    @include adaptiveValue("font-size", 40, 20, 768, 360, 1);
     font-weight: 300;
     line-height: 113%;
-
-    @include adaptiveValue("font-size", 40, 20, 768, 360, 1);
   }
 
   &__text {
-    font-size: rem(30);
+    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
     font-weight: 500;
     line-height: math.div(38, 30);
-
-    @include adaptiveValue("font-size", 30, 20, 768, 360, 1);
   }
 
   &__title,
@@ -210,13 +206,11 @@
 //=============FEATURES===========================================================================================================================================
 
 .features {
-  padding: rem(130) 0 rem(266);
   @include adaptiveValue("padding-top", 130, 37);
   @include adaptiveValue("padding-bottom", 266, 110);
 
   /* .features__testdrive-link */
   &__testdrive-link {
-
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -249,15 +243,15 @@
       position: absolute;
       background: url('@img/features/decor.svg') no-repeat;
       background-size: cover;
-      z-index: 10;
       @include adaptiveValue("width", 737, 320);
       left: 0;
       z-index: 2;
     }
 
     img {
+      position: relative;
       @include adaptiveValue("width", 192, 83);
-      z-index: 5;
+      z-index: 10;
     }
 
     &,
@@ -277,9 +271,8 @@
 
     span {
       display: block;
-      font-size: rem(36);
-      font-weight: 400;
       @include adaptiveValue("font-size", 36, 15);
+      font-weight: 400;
     }
   }
 
@@ -313,9 +306,6 @@
     display: grid;
     @include adaptiveValue("row-gap", 163, 70);
   }
-
-  /* .features__item */
-  &__item {}
 
   &__line {
     position: absolute;
@@ -371,17 +361,17 @@
       &::before {
         position: absolute;
         content: 'бесплатно';
-        bottom: -56%;
-        @include adaptiveValue("right", -85, 100);
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 25px;
+        @include adaptiveValue("right", -85, 100);
+        bottom: -56%;
         @include adaptiveValue("width", 147, 78);
         @include adaptiveValue("height", 38, 16);
+        border-radius: rem(25);
 
         background: linear-gradient(96.03deg, #4CD7AD 18.67%, #17FF2F 109.14%);
-        font-size: rem(24);
+
         @include adaptiveValue("font-size", 24, 12.73);
         font-weight: 400;
         line-height: math.div(30.77, 24);
@@ -405,7 +395,6 @@
 
   /* .item-features__text */
   &__text {
-    font-size: rem(24);
     @include adaptiveValue("font-size", 24, 16);
     font-weight: 400;
     line-height: math.div(30.77, 24);
@@ -434,7 +423,7 @@
       position: absolute;
       border-radius: 50%;
       z-index: -1;
-      // opacity: 0;
+
       transition: all 2s ease-in-out 0s;
     }
   }
@@ -451,7 +440,7 @@
 
     &._watcher-view {
       &::before {
-        transform: translate(200px, 0px);
+        transform: translate(rem(200), 0px);
         opacity: 1;
       }
     }
@@ -569,7 +558,6 @@
       }
 
       &._watcher-view {
-
         &::after {
           transform: scale(1);
         }
@@ -591,7 +579,6 @@
   &__list {
     position: relative;
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(rem(275), 1fr));
     @include adaptiveValue("column-gap", 27, 13);
     row-gap: rem(13);
     @include adaptiveValue("margin-bottom", 70, 30);
